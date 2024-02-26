@@ -1,10 +1,13 @@
 # 🛟 Lifesaver
 
-Deterministic lifesavers for common JavaScript errors, mistakes, and undefined behavior. It also includes helper
-functions for missing features prevalent in other languages.
+### Ahoy! ⚓️
 
-These helper functions are based on experiences I've had with the many quirks of JavaScript. This project is meant to
-create helper functions that help you avoid these quirks that cause errors and unexpected behavior.
+Deterministic lifesavers for common JavaScript errors, mistakes, and undefined behavior. It also includes helper
+functions for missing features prevalent in other languages that usually would help avoid these issues.
+
+These helper functions are based on experiences I've had wit' the many quirks o' JavaScript. This project be meant to
+create helper functions that help ye avoid these quirks that cause errors 'n unexpected behavior when you be lost at
+sea.
 
 ## Usage
 
@@ -29,7 +32,7 @@ empty(value); // true
 ### Error handling
 
 ```javascript
-const [result, error] = TRY(callFunction());
+const [result, error] = TRY(function);
 if (error) {
     // handle error
     throw new Error();
