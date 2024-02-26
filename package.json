@@ -1,0 +1,28 @@
+{
+    "name": "lifesaver",
+    "description": "Deterministic lifesavers for common JavaScript errors, mistakes, and undefined behavior.",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/electrikmilk/lifesaver.git"
+    },
+    "keywords": [
+        "lifesaver",
+        "undefined-behavior",
+        "helpers"
+    ],
+    "author": "electrikmilk",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/electrikmilk/lifesaver/issues"
+    },
+    "homepage": "https://github.com/electrikmilk/lifesaver#readme",
+    "type": "module",
+    "main": "src/main.js",
+    "scripts": {
+
+    },
+    "devDependencies": {
+
+    }
+}
