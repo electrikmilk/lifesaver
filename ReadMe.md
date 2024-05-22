@@ -39,6 +39,14 @@ Implements JavaScript version of sleep.
 await sleep(5); // waits for 5 seconds.
 ```
 
+### Next Frame
+
+Wait for the next frame in order for other things to happen during that frame before proceeding.
+
+```javascript
+await nextFrame();
+```
+
 ## Error handling
 
 ### Try

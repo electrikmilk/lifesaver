@@ -28,12 +28,6 @@ function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export function tempElement(callback, tagName = 'div') {
-    const temp = document.createElement(tagName);
-
-    temp.style.display = 'none';
-    document.body.append(temp);
-
-    callback(temp);
-    temp.remove();
+export async function nextFrame() {
+    await new Promise(resolve => setTimeout(resolve));
 }
