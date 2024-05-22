@@ -203,7 +203,7 @@ renderElement('div',
 
 ### Render Text
 
-This is also for rendering HTML using a tree of functions.
+This is also for rendering HTML using a tree of functions. This will return a text node.
 
 ```javascript
 renderElement('div',
