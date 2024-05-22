@@ -6,10 +6,8 @@ export function set(key, value) {
         return;
     }
 
-    localStorage.setItem(key, JSON.stringify({
-        type: typeof value,
-        value: value,
-    }));
+    const preservedValue = JSON.stringify({value: value});
+    localStorage.setItem(key, preservedValue);
 }
 
 export function get(key) {
@@ -17,18 +15,8 @@ export function get(key) {
         return false;
     }
 
-    let item = JSON.parse(localStorage.getItem(key));
-    let value = item.value;
-    switch (item.type) {
-        case 'number':
-            return parseInt(value);
-        case 'float':
-            return parseFloat(value);
-        case 'boolean':
-            return (value);
-        default:
-            return value;
-    }
+    const item = JSON.parse(localStorage.getItem(key));
+    return item.value;
 }
 
 export function forget(key) {
