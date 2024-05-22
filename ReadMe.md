@@ -15,7 +15,7 @@ sea.
 
 ### Empty value check
 
-Check if a value is completely and totally empty. Ensures it is actually empty and not `0` or `false`.
+Checks if a value is empty. Ensures it is actually empty and not `0` or `false`.
 
 ```javascript
 let value = 0;
@@ -41,7 +41,7 @@ await sleep(5); // waits for 5 seconds.
 
 ### Next Frame
 
-Wait for the next frame in order for other things to happen during that frame before proceeding.
+Wait for the next frame for other things to happen during that frame before proceeding.
 
 ```javascript
 await nextFrame();
@@ -113,13 +113,13 @@ will be returned.
 status.innerText = count + ' search ' + pluralize('result', count);
 ```
 
-Title case a string.
+### Title Case
 
 ```javascript
 titleCase('change case of sentence to Title Case');
 ````
 
-Trim prefixes and suffixes.
+### Trim prefixes and suffixes.
 
 ```javascript
 trimPrefix('foobar', 'foo')
@@ -159,7 +159,7 @@ then passed to the callback function you provide. When your function returns, th
 
 ```javascript
 // Creates element, mounts to the body hidden.
-// Passes it to callback.
+// Passes it to the callback.
 tempElement(element => {
     element.innerText = 'Hello, lifesaver!';
 });
@@ -176,7 +176,7 @@ tempElement(span => {
 This is a helper for creating elements using a much cleaner API. These elements are **not** mounted to the document body
 automatically.
 
-Provide a tag and an object of attributes to apply after initially creating the element, returns the element.
+Provide a tag and an object of attributes to apply after initially creating the element, then returns the element.
 
 ```javascript
 const myElement = newElement('div', {
