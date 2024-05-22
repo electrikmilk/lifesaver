@@ -119,7 +119,7 @@ status.innerText = count + ' search ' + pluralize('result', count);
 titleCase('change case of sentence to Title Case');
 ````
 
-### Trim prefixes and suffixes.
+### Trim prefixes and suffixes
 
 ```javascript
 trimPrefix('foobar', 'foo')
