@@ -9,7 +9,9 @@ These helper functions are based on experiences I've had wit' the many quirks o'
 create helper functions that help ye avoid these quirks that cause errors 'n unexpected behavior when you be lost at
 sea.
 
-## Usage
+# Usage
+
+## General
 
 ### Empty value check
 
@@ -29,7 +31,17 @@ value = undefined
 empty(value); // true
 ```
 
-### Error handling
+### Sleep
+
+Implements JavaScript version of sleep.
+
+```javascript
+await sleep(5); // waits for 5 seconds.
+```
+
+## Error handling
+
+### Try
 
 ```javascript
 const [result, error] = TRY(function);
@@ -42,17 +54,11 @@ if (error) {
 console.log(result);
 ```
 
-### Sleep
+## Local Storage
 
-Implements JavaScript version of sleep.
+Local storage helper functions that preserve the type of the value.
 
-```javascript
-await sleep(5); // waits for 5 seconds.
-```
-
-### Local Storage
-
-Local storage helper functions that keep the type of the value intact.
+### Set & Get
 
 ```javascript
 set('key', {test: true});
@@ -70,17 +76,25 @@ get('key'); // "string"
 
 set('key'); // clear the value of the key
 get('key') // null
+```
 
+### Forget
+
+```javascript
 forget('key'); // delete key-value pair
 ```
 
-### Strings
+## Strings
+
+### Strip HTML
 
 Strip HTML tags from a string.
 
 ```javascript
 stripTags('<p>foo</p>'); // returns foo
 ```
+
+### Pluralize
 
 Pluralize word based on an integer value. This will account for irregular plural nouns in English.
 
@@ -104,15 +118,21 @@ trimPrefix('foobar', 'foo')
 trimSuffix('foobar', 'bar')
 ````
 
-### Arrays & Objects
+## Arrays & Objects
+
+### End
 
 ```javascript
 end(value); // Returns last item without modifying the underlying array.
+```
 
+### Pluck
+
+```javascript
 pluck(value, 'key'); // Returns an array of values with provided 'key' from `value`.
 ```
 
-### Random Numbers
+## Random Numbers
 
 Generate a random number with min and max.
 
@@ -121,7 +141,9 @@ randomInt(0, 5);
 randomInt(10, 20);
 ```
 
-### Temp Elements
+## HTML DOM Elements
+
+### Temporary Element
 
 Sometimes you need to create elements temporarily. This function creates an element (by default a div), hides it using
 CSS, and mounts it to the HTML body. This element is
