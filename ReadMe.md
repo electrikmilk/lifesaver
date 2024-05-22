@@ -170,3 +170,43 @@ tempElement(span => {
     span.innerText = 'Hello, lifesaver!';
 }, 'span');
 ```
+
+### Create Element
+
+This is a helper for creating elements using a much cleaner API. These elements are **not** mounted to the document body
+automatically.
+
+Provide a tag and an object of attributes to apply after initially creating the element, returns the element.
+
+```javascript
+const myElement = newElement('div', {
+    className: "test"
+});
+```
+
+### Render Element
+
+This is for rendering HTML using a tree of functions.
+
+You can also add `#` or `.` for ID and class setting on the elements like you would using a query selector.
+
+```javascript
+renderElement('div',
+        renderElement('div#id',
+                // ...
+        ),
+        renderElement('div.class',
+                // ...
+        ),
+);
+```
+
+### Render Text
+
+This is also for rendering HTML using a tree of functions.
+
+```javascript
+renderElement('div',
+        renderText("Hello, world!"),
+);
+```
