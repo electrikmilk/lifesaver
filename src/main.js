@@ -21,7 +21,7 @@ export function empty(value) {
     return (!value && value !== 0 && value !== false);
 }
 
-function randomInt(min, max) {
+export function randomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
 
