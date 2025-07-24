@@ -22,9 +22,7 @@ export function newElement(tagName, attributes = {}) {
     return element;
 }
 
-const descriptorRegex = new RegExp(/([A-Za-z0-9]+)([.?[A-Za-z0-9]+|#?[A-Za-z0-9]+)/);
-
-export function renderElement(descriptor, ...childNodes) {
+export function newParentElement(descriptor, ...childNodes) {
     const matches = descriptor.match(descriptorRegex);
     if (!matches[1]) {
         throw new Error('renderElement(): Invalid descriptor! Please use format "tagname", "tagname.class" or "tagname#id".');
