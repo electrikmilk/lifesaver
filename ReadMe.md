@@ -184,7 +184,7 @@ const myElement = newElement('div', {
 });
 ```
 
-### Parent Element
+### Create Parent Element
 
 This is for rendering HTML using a tree of functions. Takes any elements after the tag name as children.
 
@@ -195,12 +195,12 @@ newParentElement('div',
 );
 ```
 
-### Render Text
+### Create Text Node
 
 This is also for rendering HTML using a tree of functions. This will return a text node.
 
 ```javascript
-renderElement('div',
+newParentElement('div',
         renderText("Hello, world!"),
 );
 ```
