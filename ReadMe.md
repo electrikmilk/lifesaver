@@ -176,7 +176,7 @@ tempElement(span => {
 This is a helper for creating elements using a much cleaner API. These elements are **not** mounted to the document body
 automatically.
 
-Provide a tag and an object of attributes to apply after initially creating the element, then returns the element.
+Provide a tag and an object of attributes to apply after initially creating the element, then return the element.
 
 ```javascript
 const myElement = newElement('div', {
@@ -184,20 +184,14 @@ const myElement = newElement('div', {
 });
 ```
 
-### Render Element
+### Parent Element
 
-This is for rendering HTML using a tree of functions.
-
-You can also add `#` or `.` for ID and class setting on the elements like you would using a query selector.
+This is for rendering HTML using a tree of functions. Takes any elements after the tag name as children.
 
 ```javascript
-renderElement('div',
-        renderElement('div#id',
-                // ...
-        ),
-        renderElement('div.class',
-                // ...
-        ),
+newParentElement('div',
+        newElement('div', {id: 'id'}),
+        newElement('div', {className: 'class'}),
 );
 ```
 
